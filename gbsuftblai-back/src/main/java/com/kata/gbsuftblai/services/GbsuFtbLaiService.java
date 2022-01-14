@@ -19,6 +19,10 @@ public class GbsuFtbLaiService {
 		if (inputNumber % 3 == 0) {
 			result.append("Gbsu");
 		}
+		
+		if (inputNumber % 5 == 0) {
+			result.append("Ftb");
+		}
 	
 		String number = String.valueOf(inputNumber);
 
@@ -26,9 +30,11 @@ public class GbsuFtbLaiService {
 			if (String.valueOf(ch).equals("3")) {
 				result.append("Gbsu");
 			}
+			if (String.valueOf(ch).equals("5")) {
+				result.append("Ftb");
+			}
 		}
 		
-		//	result.append(String.valueOf(inputNumber));
         if(result.toString().isEmpty())
         {
         	result.append(String.valueOf(inputNumber));
