@@ -48,9 +48,29 @@ class GbsuFtbLaiApplicationTests {
 	}
     
     @Test
-    public void testWhenNumber51ThenReturnGbsu() {
+    public void testWhenNumber51ThenReturnGbsuFtb() {
     	assertEquals("GbsuFtb",gbsuFtbLaiService.convertNumber(51).getResult());
 		assertNotEquals("Gbsu",gbsuFtbLaiService.convertNumber(51).getResult());
+	}
+    
+    @Test
+    public void testWhenNumber53ThenReturnFtbGbsu() {
+    	assertEquals("FtbGbsu",gbsuFtbLaiService.convertNumber(53).getResult());
+	}
+    
+    @Test
+    public void testWhenNumber33ThenReturnFtbGbsu() {
+    	assertEquals("GbsuGbsuGbsu",gbsuFtbLaiService.convertNumber(33).getResult());
+	}
+    
+    @Test
+    public void testWhenNumber27ThenReturnGbsuLai() {
+    	assertEquals("GbsuLai",gbsuFtbLaiService.convertNumber(27).getResult());
+	}
+    
+    @Test
+    public void testWhenNumber15ThenReturnGbsuLai() {
+    	assertEquals("GbsuFtbFtb",gbsuFtbLaiService.convertNumber(15).getResult());
 	}
     
     @Test

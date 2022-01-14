@@ -21,13 +21,10 @@ public class GbsuFtbLaiService {
 			 return resultDto;
 		}
 		
-		
-
 		HashMap<Integer, String> divMap = createDivMap();
 		HashMap<String, String> containMap = createContainMap();
 
 		divMap.forEach((key, value) -> {
-			System.out.println(key);
 			if (inputNumber % key == 0) {
 				result.append(value);
 			}
