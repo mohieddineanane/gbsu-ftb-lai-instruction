@@ -53,6 +53,10 @@ class GbsuFtbLaiApplicationTests {
 		assertNotEquals("Gbsu",gbsuFtbLaiService.convertNumber(51).getResult());
 	}
     
+    @Test
+    public void testWhenNumberisNull() {
+		assertEquals("",gbsuFtbLaiService.convertNumber(null).getResult());
+	}
     
 
 
