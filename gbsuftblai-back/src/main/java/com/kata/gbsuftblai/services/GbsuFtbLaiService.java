@@ -12,11 +12,7 @@ public class GbsuFtbLaiService {
 	
 	public ResultDto convertNumber(Integer inputNumber) {
 		ResultDto resultDto = new ResultDto();
-
 		return resultDto;
 	}
-
-
-
 
 }
