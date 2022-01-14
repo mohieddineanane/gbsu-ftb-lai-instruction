@@ -1,6 +1,7 @@
 package com.kata.gbsuftblai.services;
 
 import java.util.HashMap;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -14,6 +15,13 @@ public class GbsuFtbLaiService {
 
 		ResultDto resultDto = new ResultDto();
 		StringBuffer result = new StringBuffer();
+		
+		
+		if (!Optional.ofNullable(inputNumber).isPresent()) {
+			 return resultDto;
+		}
+		
+		
 
 		HashMap<Integer, String> divMap = createDivMap();
 		HashMap<String, String> containMap = createContainMap();

@@ -55,7 +55,7 @@ class GbsuFtbLaiApplicationTests {
     
     @Test
     public void testWhenNumberisNull() {
-		assertEquals("",gbsuFtbLaiService.convertNumber(null).getResult());
+		assertEquals(null,gbsuFtbLaiService.convertNumber(null).getResult());
 	}
     
 
