@@ -2,6 +2,7 @@ package com.kata.gbsuftblai;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,7 @@ class GbsuFtbLaiApplicationTests {
     @Test
     public void testWhenNumber1ThenReturn1() {
 		assertEquals("1",gbsuFtbLaiService.convertNumber(1).getResult());
+		assertNotEquals("",gbsuFtbLaiService.convertNumber(1).getResult());
 	}
     
     @Test
@@ -40,5 +42,18 @@ class GbsuFtbLaiApplicationTests {
 		assertEquals("Lai",gbsuFtbLaiService.convertNumber(7).getResult());
 	}
     
+    @Test
+    public void testWhenNumber9ThenReturnGbsu() {
+		assertEquals("Gbsu",gbsuFtbLaiService.convertNumber(9).getResult());
+	}
+    
+    @Test
+    public void testWhenNumber51ThenReturnGbsu() {
+    	assertEquals("GbsuFtb",gbsuFtbLaiService.convertNumber(51).getResult());
+		assertNotEquals("Gbsu",gbsuFtbLaiService.convertNumber(51).getResult());
+	}
+    
+    
+
 
 }
