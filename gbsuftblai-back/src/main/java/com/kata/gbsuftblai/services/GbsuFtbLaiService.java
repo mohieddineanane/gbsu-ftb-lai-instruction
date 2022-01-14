@@ -33,6 +33,9 @@ public class GbsuFtbLaiService {
 			if (String.valueOf(ch).equals("5")) {
 				result.append("Ftb");
 			}
+			if (String.valueOf(ch).equals("7")) {
+				result.append("Lai");
+			}
 		}
 		
         if(result.toString().isEmpty())
