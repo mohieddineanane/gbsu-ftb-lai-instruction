@@ -35,5 +35,10 @@ class GbsuFtbLaiApplicationTests {
 		assertEquals("FtbFtb",gbsuFtbLaiService.convertNumber(5).getResult());
 	}
     
+    @Test
+    public void testWhenNumber7ThenReturnLai() {
+		assertEquals("Lai",gbsuFtbLaiService.convertNumber(7).getResult());
+	}
+    
 
 }
