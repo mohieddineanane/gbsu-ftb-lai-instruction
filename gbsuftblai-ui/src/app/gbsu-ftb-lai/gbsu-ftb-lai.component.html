@@ -1,6 +1,12 @@
 <div>
-<div class="container">
+<div *ngIf="numbersConverted.length" class="container">
     <h2>Already converted values : </h2>
+    <ul class="list-group">
+        <li class="list-group-item-custom" *ngFor="let convertedNumber of numbersConverted">
+          {{convertedNumber.numberToConvert}} and the result is {{convertedNumber.result}} 
+        </li>
+        <br/>
+      </ul>
 </div>
-<app-gbsu-ftb-lai-form (submitNumberOutput)="convertNumber($event)"></app-gbsu-ftb-lai-form>
+<app-gbsu-ftb-lai-form (gbsuFormOutput)="convertNumber($event)"></app-gbsu-ftb-lai-form>
 </div>
