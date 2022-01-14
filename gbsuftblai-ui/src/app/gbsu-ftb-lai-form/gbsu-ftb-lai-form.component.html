@@ -1,3 +1,8 @@
 <div class="container"> 
-    To Be Completed
+    <form [formGroup] = "gbsuForm">
+    <label for="inputNumber">Number to convert</label>
+    <input id="inputNumber" class="form-control" formControlName="inputNumber"  type="number"/>
+     <br>
+    <button class="btn btn-primary" (click)="submitNumber()" >Convert</button>
+    </form>
 </div>

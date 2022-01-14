@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-gbsu-ftb-lai-form',
@@ -16,6 +16,17 @@ export class GbsuFtbLaiFormComponent implements OnInit {
   }
 
   submitNumber(): void {
+  this.gbsuFormOutput.emit(this.gbsuForm.get('inputNumber').value);
   }
+  
+  @Output()
+  gbsuFormOutput = new EventEmitter<number>();
+  gbsuForm = new FormGroup({
+    inputNumber: new FormControl('', { validators: [
+      Validators.required,
+      Validators.pattern(/^[0-9]*$/)
+      ]
+    })
+  });
 
 }
